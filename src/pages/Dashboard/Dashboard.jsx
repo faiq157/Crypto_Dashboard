@@ -1,8 +1,13 @@
 import React from "react";
-import Sidenav from "../../components/Sidenav";
 
-const Dashboard = () => {
-  return <Sidenav />;
+import DashboardLayout from "../../components/DashboardLayout";
+
+const Dashboard = ({}) => {
+  return (
+    <DashboardLayout title={"DashBoard"}>
+      <div>How are you</div>
+    </DashboardLayout>
+  );
 };
 
 export default Dashboard;
