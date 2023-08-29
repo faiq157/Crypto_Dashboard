@@ -4,35 +4,48 @@ import { BiSolidDownArrowSquare, BiSolidUpArrowSquare } from "react-icons/bi";
 
 const PortfolioSection = () => {
   return (
-    <HStack bg={"white"} rounded={"xl"} p={"24px"} spacing={16}>
+    <HStack
+      justifyContent={"space-between"}
+      bg={"white"}
+      rounded={"xl"}
+      p={"24px"}
+      alignItems={{
+        base: "flex-start",
+        lg: "center",
+      }}
+      flexDir={{
+        base: "column",
+        lg: "row",
+      }}
+    >
       <Stack>
         <HStack fontSize={"14"} color={"black.80"}>
           <Text>Total Portfolio Value</Text>
+
           <Icon as={AiFillInfoCircle} />
         </HStack>
         <Text>₹ 112,312.24</Text>
       </Stack>
       <Stack>
-        <HStack fontSize={"14"} color={"black.80"}>
-          <Text>Wallet Balances</Text>
-        </HStack>
+        <Text fontSize={"14"} color={"black.80"}>
+          Wallet Balances
+        </Text>
         <HStack>
-          <Text>22.39401000</Text> <Tag>BTC</Tag>
+          <Text>₹ 112,312.24</Text>
+          <Tag colorScheme="gray">BTC</Tag>
+          <HStack>
+            <Text>₹ 112,312.24</Text>
+            <Tag colorScheme="gray">INR</Tag>
+          </HStack>
         </HStack>
       </Stack>
-      <Stack>
-        <HStack>
-          <Text>₹ 1,300.00</Text>
-          <Tag>INR</Tag>
-        </HStack>
-      </Stack>
-
       <HStack>
-        <Button color={"white"} bg={"purple"}>
+        <Button>
           <Icon as={BiSolidDownArrowSquare} fontSize={20} />
           Deposit
         </Button>
-        <Button color={"white"} bg={"purple"}>
+
+        <Button>
           <Icon as={BiSolidUpArrowSquare} fontSize={20} />
           WithDraw
         </Button>
